@@ -6,7 +6,7 @@
 
 ## Run
 
-Use Node 20, then:
+Use Node 22.23.4 (`nvm use`), then:
 
 ```sh
 npm ci
@@ -61,7 +61,7 @@ npm run typecheck
 npm run build
 ```
 
-The domain tests cover money boundaries, draft/template/revision schemas, archive filtering, identifier reservations, backup roundtrips and limits, immutable restoration, and stale-storage protection. CI runs domain tests and the production build with pinned actions and Node 20.18.1.
+The domain tests cover money boundaries, draft/template/revision schemas, archive filtering, identifier reservations, backup roundtrips and limits, immutable restoration, and stale-storage protection. CI runs domain tests and the production build with pinned actions and the Node version in `.nvmrc` (22.23.4).
 
 Browser checks use an externally supplied Playwright runtime. Start the production app, set `QUOTE_TEST_URL` to its URL, then run:
 
@@ -78,6 +78,6 @@ Local verification used Node 20.19.0 and current Chrome. After the Tallyleaf red
 
 ## Technology and credits
 
-Next.js 14.2.22, React 18.3.1, TypeScript 5.3.3, and Tailwind CSS 3.4.1. The pinned dependencies have known advisories; review and upgrade them before production deployment.
+Next.js 14.2.35, React 18.3.1, TypeScript 5.3.3, and Tailwind CSS 3.4.1. The pinned dependencies have known advisories; review and upgrade them before production deployment.
 
 Card, Badge, Textarea and Alert follow the shadcn/ui source patterns; Separator and NativeSelect are dependency-free equivalents that avoid adding Radix packages. Button and Input retain their original shadcn/ui source from revision [`c21ecfb665214e18cd5914ea319f925cd676e786`](https://github.com/shadcn-ui/ui/tree/c21ecfb665214e18cd5914ea319f925cd676e786), under `apps/www/registry/default/ui/`. The upstream MIT license is preserved in [SHADCN-LICENSE.md](SHADCN-LICENSE.md).
